@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flabtab</title>
+  </head>
+  <body  ng-app="app">
+    <form name="ActivityForm" ng-controller="ActivityController">
+      <label>activity</label>
+      <input type="text" id="ActivityName" ng-model="activity.name" placeholder="activity" />
+      <input type="nimber" id="ActivityCount" ng-model="activity.count" placeholder="count" />
+      <input type="date" id="ActivityDate" ng-model="activity.date" />
+      <br />
+      <input type="button" value="save" ng-click="saveActivity()" />
+    </form>
+    <ul>
+      <li ng-repeat="activity in activities">{{ activity.name }}</li>
+    </ul>
+    <script src="./scripts/vendor/angular.js"></script>
+    <script src="./scripts/vendor/lib/angular-resource.js"></script>
+    <script src="./scripts/lb-services.js"></script>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
